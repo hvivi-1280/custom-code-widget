@@ -23,26 +23,49 @@
       cursor: pointer;
       margin-top: 20px;
     }
-    audio {
+    /* Container for Audio Players */
+    .audio-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between the audio players */
+      flex-wrap: wrap; /* Allows wrapping on smaller screens */
       margin: 20px 0;
+    }
+    /* Style individual audio players */
+    .audio-container audio {
+      width: 300px; /* Adjust as needed */
+      max-width: 100%;
+    }
+    /* Optional: Responsive iframe */
+    .fp-iframe {
+      border: 1px solid lightgray;
       width: 100%;
-      max-width: 300px;
+      height: 400px;
+      max-width: 800px; /* Optional: Limit maximum width */
+      margin: 0 auto; /* Center the iframe */
     }
   </style>
 </head>
 <body>
-    <!-- Music Player -->
-    <audio controls>
-      <source src="midnight wave chronicles playlist pt 1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <!-- Music Players Container -->
+    <div class="audio-container">
+        <!-- First Music Player -->
+        <audio controls>
+          <source src="midnight wave chronicles playlist pt 1.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Second Music Player -->
+        <audio controls>
+          <source src="midnight wave chronicles playlist pt 2 (3).mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <!-- Flipbook Iframe -->
     <iframe 
       allowfullscreen="allowfullscreen" 
       scrolling="no" 
       class="fp-iframe" 
-      style="border: 1px solid lightgray; width: 100%; height: 400px;" 
       src="https://heyzine.com/flip-book/c6a5765d0b.html">
     </iframe>
 
